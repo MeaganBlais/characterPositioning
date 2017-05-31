@@ -5,9 +5,9 @@ function countLetters(str) {
     for (var i = 0; i < splitStr.length; i++) {
         var currChar = splitStr[i];
         if (output[currChar] === undefined) {
-            output[currChar] = currChar[i]
+            output[currChar] = [i] // when using this in string form multiples of i are returned
         } else {
-            output[currChar] = output[currChar] + currChar[i]
+            output[currChar] = output[currChar] + ', ' + [i]
         }
     }
         return output;
